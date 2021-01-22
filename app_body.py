@@ -26,18 +26,21 @@ def dataset():
     st.write('')
     st.subheader('Data Information')
     st.write('-----------------------------------------------------------------------') 
-    st.write('This is a collection of data sets from DepEd which contains Philippine public school information.')
+    st.write('This is project is based on a collection of data sets from DepEd which contains public school information from the Philippines.')
+    st.text("")
+    # st.write('')
+    # dataset_sample = {
+    #                   'Data Set Name': ['Masterlist of Schools', 'Schools Location', 'Number of Rooms', 'Number of Teachers', 'Enrollment Master', 'MOOE'], 
+    #                   'Rows': ['46,603', '46,624', '46,412', '45,040', '46,626', '46,028'],
+    #                   'Columns': ['22', '12', '5', '5', '17', '5'],
+    #                   'Description': ['Masterlist of Public Elementary and Secondary Schools', 'Location of Public Schools', 'Instructional Rooms in Public Elementary and Secondary Schools', 'Masterlist of Public School Teachers', 'Total Enrollment in Public Elementary and Secondary Schools', 'Maintenance and Other Operational Expenses (MOOE) allocation for Public Elementary and Secondary Schools']
+    #                  }
     
-    st.write('')
+    # st.table(dataset_sample)
     st.markdown('<b>Data Sets:</b>', unsafe_allow_html=True)
-    dataset_sample = {
-                      'Data Set Name': ['Masterlist of Schools', 'Schools Location', 'Number of Rooms', 'Number of Teachers', 'Enrollment Master', 'MOOE'], 
-                      'Rows': ['46,603', '46,624', '46,412', '45,040', '46,626', '46,028'],
-                      'Columns': ['22', '12', '5', '5', '17', '5'],
-                      'Description': ['Masterlist of Public Elementary and Secondary Schools', 'Location of Public Schools', 'Instructional Rooms in Public Elementary and Secondary Schools', 'Masterlist of Public School Teachers', 'Total Enrollment in Public Elementary and Secondary Schools', 'Maintenance and Other Operational Expenses (MOOE) allocation for Public Elementary and Secondary Schools']
-                     }
-    
-    st.table(dataset_sample)
+
+    image = Image.open('data.png').convert('RGB')
+    st.image(image, caption='', width=708, height=600)
 
 def tools():
     st.write('')
