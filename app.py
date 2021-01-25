@@ -26,8 +26,8 @@ st.sidebar.markdown("<h1 style='text-align: center;margin-bottom:50px'>DS Cohort
 add_selectbox = st.sidebar.radio(
     "",
     ("Introduction and Problem Statement", "Data Information", "List of Tools", "Data Cleaning", 
-    "Exploratory Data Analysis", "Determining Optimal K", "K-Means Clustering", "Insights Derived from Modeling", 
-    "Recommendations", "Contributors")
+    "Exploratory Data Analysis", "Removing Outliers", "Determining Optimal K", "K-Means Clustering", "Insights Derived from Clustering", 
+    "Conclusions and Recommendations", "Contributors")
 )
 
 
@@ -43,3 +43,23 @@ elif add_selectbox == 'List of Tools':
 elif add_selectbox == 'Data Cleaning':
     body.cleaning()
 
+elif add_selectbox == 'Exploratory Data Analysis':
+    body.eda()
+
+elif add_selectbox == 'Removing Outliers':
+    body.outliers()
+
+elif add_selectbox == 'Determining Optimal K':
+    body.optimal()
+
+elif add_selectbox == 'K-Means Clustering':
+    body.kmeans()
+
+elif add_selectbox == 'Insights Derived from Clustering':
+    body.insights()
+
+elif add_selectbox == 'Conclusions and Recommendations':
+    body.candr()
+
+elif add_selectbox == 'Contributors':
+    body.contributors()
